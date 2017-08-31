@@ -42,28 +42,30 @@
                 incorrect++;
                 }
               j++;
-             loop=setTimeout(start,1000);
+             loop=setTimeout(start,3000);
              end();
             });
 	}
 	function displaytime(){
-		    $("#counter").text("Time remaing: "+count);
+		    $("#counter").text("Time Remaining :"+count);
 		    count=count-1;
 		    if(count<0)
 		    {
 		    count=30;
 		    clearInterval(countdown);
+		    $("#"+j.toString()).text("Out of Time");
 		    $("#"+j.toString()).css("background-color", "#2ECC40");
+		    $("#"+j.toString()).append("<img style= 'zoom:40%;' src='"+quiz[j].I+"'/>");
 		    unguessed++; 
-            loop=setTimeout(start,1000);
+            loop=setTimeout(start,8000);
             j++;
             end();
 		    }
 	}
 	function display(){
 		$("#game").empty();
-		$("#game").css("padding","100px");
-	    $("#game").append("<div id='counter'>Time remaing: "+count+"</div>");
+		$("#game").css("padding"," 25px");
+	    $("#game").append("<div id='counter'>Time Remaining :"+count+"</div>");
 		$("#game").append(quiz[j].Q).css("font-size", "20px");
 		$("#game").append("<div id='Answer'></div>");
 		for(var i=0;i<quiz.length;i++)
