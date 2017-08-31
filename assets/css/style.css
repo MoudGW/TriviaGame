@@ -1,0 +1,39 @@
+#container{
+    background-color: #DDDDDD;
+    width: 800px;
+    margin-left: 20%;
+    text-align: center;
+    min-height: 500px;
+    height: auto;
+    border-radius: 33px;
+}
+.button{
+    margin: 170px;
+    padding: 5px 40px;
+    font-size: 35px;
+    border-radius: 33px;
+    color: white;
+    background: #FF4136;
+    border: none;
+    animation-name: anim;
+    animation-duration: 2s;
+    animation-iteration-count: 10000;
+    box-shadow: 2px 5px 29px firebrick;
+}
+@keyframes anim{
+        50%{ box-shadow: 0px 0px 0px firebrick;   
+        }
+        100%{ box-shadow: 2px 5px 29px firebrick;
+        }
+    }
+
+.childclass,#counter{
+	display: grid;
+    padding: 20px;
+    font-size:20px;
+   text-align: -webkit-center;
+   border-radius: 33px;
+}
+.childclass{
+    font-size:18px;
+}
