@@ -57,7 +57,7 @@
 		    $("#"+j.toString()).css("background-color", "#2ECC40");
 		    $("#"+j.toString()).append("<img style= 'zoom:40%;' src='"+quiz[j].I+"'/>");
 		    unguessed++; 
-            loop=setTimeout(start,8000);
+            loop=setTimeout(start,3000);
             j++;
             end();
 		    }
