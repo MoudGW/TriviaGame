@@ -26,7 +26,7 @@
 	});
 	function start(){
           display();
-          countdown=setInterval(displaytime,800);
+          countdown=setInterval(displaytime,1000);
             $(".childclass").click(function(){
                 clearInterval(countdown);
                 count=30;
@@ -42,12 +42,12 @@
                 incorrect++;
                 }
               j++;
-             loop=setTimeout(start,3000);
+             loop=setTimeout(start,5000);
              end();
             });
 	}
 	function displaytime(){
-		    $("#counter").text("Time Remaining :"+count);
+             $("#anim").text(count);
 		    count=count-1;
 		    if(count<0)
 		    {
@@ -57,7 +57,7 @@
 		    $("#"+j.toString()).css("background-color", "#2ECC40");
 		    $("#"+j.toString()).append("<img style= 'zoom:40%;' src='"+quiz[j].I+"'/>");
 		    unguessed++; 
-            loop=setTimeout(start,3000);
+            loop=setTimeout(start,5000);
             j++;
             end();
 		    }
@@ -65,7 +65,7 @@
 	function display(){
 		$("#game").empty();
 		$("#game").css("padding"," 25px");
-	    $("#game").append("<div id='counter'>Time Remaining :"+count+"</div>");
+	    $("#game").append("<div id='clock'><div id='anim'>"+count+"</div><div id='counter'></div></div>");
 		$("#game").append(quiz[j].Q).css("font-size", "20px");
 		$("#game").append("<div id='Answer'></div>");
 		for(var i=0;i<quiz.length;i++)
@@ -97,3 +97,5 @@
 	     }}
     
     });
+ 
+
