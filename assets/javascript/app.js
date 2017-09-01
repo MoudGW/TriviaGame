@@ -6,7 +6,6 @@
 	var countdown;
 	var loop;
 	var quiz;
-	var playSound;
 	function init(){
      guess=0;
 	 incorrect=0;
@@ -28,14 +27,16 @@
           display();
           countdown=setInterval(displaytime,1000);
             $(".childclass").click(function(){
+            	$(".childclass").off('click');
+                $(".childclass").unbind();
                 clearInterval(countdown);
                 count=30;
                 if($(this).text()===quiz[j].R){
-                    $(this).text("correct");
+                    $(this).text("Correct");
                     $(this).append("<img style= 'zoom:40%;' src='"+quiz[j].I+"'/>");
                     guess++;
                 }else{
-                $(this).text("incorrect");
+                $(this).text("Incorrect");
                 $("#"+j.toString()).css("background-color", "#2ECC40");
                 $(this).css("background-color", "#FF4136");
                 $("#"+j.toString()).append("<img style= 'zoom:40%;' src='"+quiz[j].I+"'/>");

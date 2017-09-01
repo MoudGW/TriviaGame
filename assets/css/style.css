@@ -52,7 +52,8 @@
     position:absolute;
     margin-left: 330px;
     border-radius: 50%;
-    border: 1px solid #FF4136;
+
+    border: 1px solid #FF4136; 
     width: 80px;
     height: 80px;
     border-top:4px solid #39CCCC;
@@ -68,4 +69,7 @@
         to{
         	transform: rotate(360deg);
         }
+    }
+    img{
+       padding-top:40px;
     }
