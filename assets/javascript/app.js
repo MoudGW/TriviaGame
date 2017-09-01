@@ -42,6 +42,7 @@
                 incorrect++;
                 }
               j++;
+             $('#counter').css('animation-iteration-count','0');
              loop=setTimeout(start,5000);
              end();
             });
@@ -56,7 +57,8 @@
 		    $("#"+j.toString()).text("Out of Time");
 		    $("#"+j.toString()).css("background-color", "#2ECC40");
 		    $("#"+j.toString()).append("<img style= 'zoom:40%;' src='"+quiz[j].I+"'/>");
-		    unguessed++; 
+		    unguessed++;
+		    $('#counter').css('animation-iteration-count','0');
             loop=setTimeout(start,5000);
             j++;
             end();
