@@ -88,6 +88,7 @@
 		    {
 		    clearTimeout(loop);
 		    setTimeout(function(){$("#game").empty();
+		    	$("#game").css('padding-top','100px');
 			$("#game").append("<div>unguessed :"+unguessed+"</div");
 			$("#game").append("<div>incorrect :"+incorrect+"</div");
 			$("#game").append("<div>correct :"+guess+"</div");
