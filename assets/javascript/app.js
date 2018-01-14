@@ -23,6 +23,7 @@
 	init();
     start();
 	});
+	
 	function start(){
           display();
           countdown=setInterval(displaytime,1000);
